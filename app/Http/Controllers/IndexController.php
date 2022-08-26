@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Enquiry;
+use App\Models\FaqQuestion;
+use App\Models\Service;
+use App\Models\Testimonial;
+use App\Models\ShippingLogistic;
+use App\Models\ImageGallery;
 use App\Models\ContactusEnquiry;
 use App\Models\StoreDistributor;
 use App\Models\File;
@@ -18,7 +23,44 @@ use Response;
 class IndexController extends Controller
 {
     public function index(){
-        return view('frontend.index');
+        $faqQuestions = FaqQuestion::latest()->limit(6)->get();
+        $testimonials = Testimonial::latest()->limit(5)->get();
+        $imageGallery = ImageGallery::latest()->limit(9)->get();
+        return view('frontend.index',compact('faqQuestions','testimonials','imageGallery'));
+    }
+
+    public function shippingLogistics(Request $request)
+    {
+        $shipping_logistic = ShippingLogistic::latest()->first();
+
+        return view('frontend.shipping-logistics',compact('shipping_logistic'));
+    }
+
+    public function aboutUs(Request $request)
+    {
+        return view('frontend.about-us');
+    }
+
+
+    public function services(Request $request)
+    {
+        $service_tab1 = Service::find(1)->first();
+        $service_tab2 = Service::find(2)->first();
+        $service_tab3 = Service::find(3)->first();
+        $service_tab4 = Service::find(4)->first();
+
+        return view('frontend.services',compact('service_tab1','service_tab2','service_tab3','service_tab4'));
+    }
+
+    public function calculator(Request $request)
+    {
+        return view('frontend.calculator');
+    }
+
+
+    public function galleryPortfolio(Request $request)
+    {
+        return view('frontend.gallery-portfolio');
     }
 
     public function playerRegistration()

@@ -80,6 +80,37 @@
                 </ul>
             </li>
 
+
+            <li class="side-nav-item">
+                <a href="javascript: void(0);" class="side-nav-link">
+                    <i class="mdi mdi-tools"></i>
+                    <span> CMS </span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <ul class="side-nav-second-level" aria-expanded="false">
+                    <li>
+                        <a href="{{route('admin.faq-questions.index')}}">Faq Questions</a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.image-gallery.index')}}">Image Gallery</a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('admin.testimonial.index')}}">Testimonials</a>
+                    </li>
+
+
+                    <li>
+                        <a href="{{route('admin.shipping-logistics.index')}}">Shipping Logistics</a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('admin.services.index')}}">Services</a>
+                    </li>
+
+                </ul>
+            </li>
+
         <li class="side-nav-item">
             <a href="javascript: void(0);" class="side-nav-link">
                 <i class="mdi mdi-tools"></i>

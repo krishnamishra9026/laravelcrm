@@ -1,29 +1,29 @@
-<div class="desktop-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-3 col-xs-12">
-                        <a class="navbar-brand" href="/"> <img src="assets/front/images/logo.png" alt="Logo" class="img-responsive"></a>
-                    </div>
-                    <div class="col-sm-9 col-xs-12">
-                        <nav class="navbar">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="collapse navbar-collapse" id="myNavbar">
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="/">Home<i class="mdi mdi-home hidden-lg hidden-md hidden-sm"></i></a></li>
-                                    <li><a href="/games">Games<i class="mdi mdi-gamepad-square hidden-lg hidden-md hidden-sm"></i></a></li>
-                                    <li class="registration-width"><a href="/stores-distributors">Stores and Distributors<i class="mdi mdi-store hidden-lg hidden-md hidden-sm"></i></a></li>
-                                    <li class="registration-width"><a href="/player-registration">Player Registration<i class="mdi mdi-cellphone-basic hidden-lg hidden-md hidden-sm"></i></a></li>
-                                    <li><a href="/contact-us">Contact Us<i class="mdi mdi-headphones hidden-lg hidden-md hidden-sm"></i></a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
+<nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="about-us">About</a></li>
+          <li><a class="nav-link scrollto" href="services">Products & services</a></li>
+          <li><a class="nav-link scrollto " href="shipping-logistics"> Shipping and logistics</a></li>
+          <li><a class="nav-link scrollto " href="gallery-portfolio"> Gallery or portfolio </a></li>
+          <li><a class="nav-link scrollto " href="calculator">Coal Calculator</a></li>
+       <!--    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>-->
+          <li><a class="nav-link scrollto" href="contact-us">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>

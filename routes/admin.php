@@ -6,12 +6,18 @@ use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\Auth\RegisterController;
 use App\Http\Controllers\Admin\Auth\ChangePasswordController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\FaqCategoryController;
+use App\Http\Controllers\Admin\FaqQuestionController;
 use App\Http\Controllers\Admin\PersonalUserController;
 use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\ContactusEnquiryController;
 use App\Http\Controllers\Admin\StoreDistributorController;
 use App\Http\Controllers\Admin\PlayerController;
 use App\Http\Controllers\Admin\AdminReplyController;
+use App\Http\Controllers\Admin\ImageGalleryController;
+use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\ShippingLogisticController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,12 +80,29 @@ Route::resource('contactus-enquiries', ContactusEnquiryController::class);
 Route::resource('send-reply', AdminReplyController::class);
 Route::resource('replies', AdminReplyController::class);
 
+
+ // Faq Categories
+    Route::delete('faq-categories/destroy', [FaqCategoryController::class,'massDestroy'])->name('faq-categories.massDestroy');
+    Route::resource('faq-categories', FaqCategoryController::class);
+
+    //Faq::class Questions
+    Route::delete('faq-questions/destroy', [FaqQuestionController::class, 'massDestroy'])->name('faq-questions.massDestroy');
+    Route::resource('faq-questions', FaqQuestionController::class);
+
 /*
 |--------------------------------------------------------------------------
 | Settings > My Account Route
 |--------------------------------------------------------------------------
 */
 Route::resource('my-account', MyAccountController::class);
+
+Route::resource('image-gallery', ImageGalleryController::class);
+
+Route::resource('testimonial',TestimonialController::class);
+
+Route::resource('services',ServiceController::class);
+
+Route::resource('shipping-logistics',ShippingLogisticController::class);
 
 /*
 |--------------------------------------------------------------------------

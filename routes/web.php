@@ -19,6 +19,13 @@ Route::get('/', [IndexController::class, 'index'])->name('index');
 
 Route::get('/player-registration', [IndexController::class, 'playerRegistration'])->name('player-registration');
 
+Route::get('/shipping-logistics', [IndexController::class, 'shippingLogistics'])->name('shipping-logistics');
+Route::get('/about-us', [IndexController::class, 'aboutUs'])->name('about-us');
+Route::get('/contact-us', [IndexController::class, 'contactUs'])->name('contact-us');
+Route::get('/services', [IndexController::class, 'services'])->name('services');
+Route::get('/calculator', [IndexController::class, 'calculator'])->name('calculator');
+Route::get('/gallery-portfolio', [IndexController::class, 'galleryPortfolio'])->name('gallery-portfolio');
+
 Route::post('/player-registration', [IndexController::class, 'playerRegistrationPost'])->name('player-registration');
 
 Route::get('/stores-distributors', [IndexController::class, 'storesDistributors'])->name('stores-distributors');

@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="utf-8" />
-    <title>@yield('title')</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Casino" name="description" />
-    <meta content="N2R Technologies" name="author" />
+  <meta charset="utf-8">
+  <meta content="width=adevice-width, initial-scale=1.0" name="viewport">
 
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/front/images/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>Pyramid Energy - Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- App Fonts -->
-    <!-- App css -->
-    <link href="assets/front/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/front/css/icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/front/css/new-style.css" rel="stylesheet" type="text/css"/>
-    <script language="JavaScript" type="text/javascript" src="assets/front/js/jquery-2.1.1.min.js"></script>
-    <script language="JavaScript" type="text/javascript" src="assets/front/js/bootstrap.min.js"></script>
+  <!-- Favicons -->
+  <link href="assets/front/img/favic.png" rel="icon">
+  <link href="assets/front/img/apple-touch-ic.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/front/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/front/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/front/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/front/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/front/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/front/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <link href="assets/front/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/front/css/style.css" rel="stylesheet">
+
+
 </head>
 
-
 <body>
-        @include('frontend.sections.navbar')
-    
+
+ 
+
+    @include('frontend.sections.header')
+
     @yield('content')
-    
-    <!-- App Scripts -->
-    <script language="JavaScript" type="text/javascript" src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
-    <script language="JavaScript" type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+ @include('frontend.sections.footer')
+
+     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/front/vendor/aos/aos.js"></script>
+  <script src="assets/front/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/front/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/front/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/front/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/front/js/main.js"></script>
+
     @stack('scripts')
 </body>
 
